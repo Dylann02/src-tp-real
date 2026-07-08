@@ -26,6 +26,12 @@ function get_one_line($sql){
     return $result;
 }
 
+function get_dtp_tri(){
+    $sql ="SELECT dept_no , dept_name FROM departments ORDER BY dept_name ASC";
+    return get_all_lines($sql);
+}
+
+
 function get_all_departments()
 {
     $sql = "SELECT d.dept_no,
