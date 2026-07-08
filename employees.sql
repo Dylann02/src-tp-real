@@ -22,8 +22,8 @@
 --  Any similarity to existing people is purely coincidental.
 -- 
 
--- DROP DATABASE IF EXISTS employees;
--- CREATE DATABASE employees;
+DROP DATABASE IF EXISTS employees;
+CREATE DATABASE employees;
 USE employees;
 
 SELECT 'CREATING DATABASE STRUCTURE' as 'INFO';
