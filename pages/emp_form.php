@@ -95,6 +95,8 @@
             <select name="gender">
                 <option value="M" <?= $gender === 'M' ? 'selected' : '' ?>>M</option>
                 <option value="F" <?= $gender === 'F' ? 'selected' : '' ?>>F</option>
+                <option value="Autre" <?= $gender === 'Autre' ? 'selected' : '' ?>>Autre</option>
+
             </select>
         </p>
         <p>Date de naissance : <input type="date" name="birth_date" value="<?= htmlspecialchars($birth_date) ?>"></p>

@@ -59,6 +59,7 @@ function get_jobs_stats()
     $sql = "SELECT t.title,
                    SUM(e.gender = 'M') AS nb_hommes,
                    SUM(e.gender = 'F') AS nb_femmes,
+                   SUM(e.gender = 'Autre') AS nb_autre,
                    COUNT(*)            AS nb_total,
                    AVG(s.salary)       AS salaire_moyen
             FROM titles t

@@ -15,6 +15,7 @@
             <th>Emploi</th>
             <th>Hommes</th>
             <th>Femmes</th>
+            <th>Autre</th>
             <th>Total</th>
             <th>Salaire moyen</th>
         </tr>
@@ -23,6 +24,8 @@
                 <td><?= $row['title'] ?></td>
                 <td><?= $row['nb_hommes'] ?></td>
                 <td><?= $row['nb_femmes'] ?></td>
+                <td><?= $row['nb_autre'] ?></td>
+
                 <td><?= $row['nb_total'] ?></td>
                 <td><?= number_format($row['salaire_moyen'], 0, ',', ' ') ?> €</td>
             </tr>
