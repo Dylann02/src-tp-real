@@ -32,9 +32,9 @@ function get_all_departments()
                    d.dept_name,
                    CONCAT(e.first_name, ' ', e.last_name) AS manager_name,
                    (SELECT COUNT(*)
-                      FROM dept_emp de
-                     WHERE de.dept_no = d.dept_no
-                       AND de.to_date = '9999-01-01') AS nb_employees
+                    FROM dept_emp de
+                    WHERE de.dept_no = d.dept_no
+                    AND de.to_date = '9999-01-01') AS nb_employees
             FROM departments d
             LEFT JOIN dept_manager dm
                    ON dm.dept_no = d.dept_no
@@ -96,7 +96,7 @@ function get_departments_except($dept_no)
     $sql = "SELECT dept_no, dept_name
             FROM departments
             WHERE dept_no <> '%s'
-            ORDER BY dept_name";
+            ORDER BY dept_name ";
     $sql = sprintf($sql, $dept_no);
     return get_all_lines($sql);
 }
